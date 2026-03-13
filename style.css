@@ -1,0 +1,196 @@
+/* Reset y fuente */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Una fuente más moderna */
+  background: #f5f6fa;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Contenedor */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header - Estilo Profesional Aviación */
+header {
+  background: #0a2540;
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+  border-bottom: 4px solid #0077b6;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+header p {
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+header nav {
+  margin-top: 25px;
+}
+
+header nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #0077b6;
+}
+
+/* Secciones */
+section {
+  margin: 60px 0;
+}
+
+h2 {
+  color: #0a2540;
+  margin-bottom: 30px;
+  border-left: 5px solid #0077b6;
+  padding-left: 15px;
+}
+
+/* Sobre Mí - Lista con Iconos */
+#about ul {
+  background: white;
+  padding: 30px !important;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  list-style: none;
+}
+
+#about li {
+  margin-bottom: 18px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+}
+
+#about li strong {
+  color: #0a2540;
+  margin-right: 5px;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Animación de "Despegue" */
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+  border-bottom: 3px solid #0077b6;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #0a2540;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #555;
+  flex-grow: 1;
+}
+
+/* Tecnologías dentro de las tarjetas */
+.project-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.project-card ul li {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 6px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.project-card ul li::before {
+  content: "✈"; /* Icono de avión para tu temática */
+  position: absolute;
+  left: 0;
+  color: #0077b6;
+  font-size: 0.8rem;
+}
+
+/* Botones de Proyecto */
+.project-card a {
+  align-self: flex-start;
+  padding: 10px 20px;
+  background: #0077b6;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.project-card a:hover {
+  background: #0a2540;
+}
+
+/* Skills */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.skills-list li {
+  background: #e9ecef;
+  color: #0a2540;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 2px solid #ced4da;
+}
+
+/* Contacto y Footer */
+#contact {
+  text-align: center;
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  background: #0a2540;
+  color: white;
+  padding: 30px 0;
+  margin-top: 40px;
+}
