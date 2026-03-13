@@ -25,5 +25,5 @@ Landing page interactiva para la exposición de vehículos desarrollada durante 
 
 ---
 📫 **Contacto:**
-- LinkedIn: alejandronicolascalvo-dev/)
+- LinkedIn: (https://www.linkedin.com/in/alejandronicolascalvo-dev/)
 - GitHub: (https://github.com/alejandronicolascalvo-dev/Portfolio)
