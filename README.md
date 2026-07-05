@@ -11,7 +11,7 @@ Un centro de control digital diseñado para la gestión de flotas y tripulacione
 *   **Temática:** Monitorización aeronáutica, optimización de disponibilidad y control de estados (Ready, Flying, Maintenance, SBY).
 *   **Tecnologías:** HTML5, CSS3 (Modern UI) y JavaScript Vanilla (ES6).
 *   **Funcionalidades Clave:** Dashboard completamente reactivo con actualización automática de KPIs, filtrado dinámico mediante buscador inteligente y lógica de disponibilidad para tripulaciones.
-*   **Repositorio:** [Ver código de SkyOps](https://github.com/alejandronicolascalvo-dev/Portfolio) 
+*   **Repositorio:** [Ver código de SkyOps](https://github.com/alejandronicolascalvo-dev/OCC-ops)
 
 ### 2. Agente IA Conversacional y Gobernanza Cloud (TechSoluciones)
 Diseño, despliegue y evaluación automatizada de un asistente virtual de atención al cliente utilizando arquitecturas avanzadas en la nube.
