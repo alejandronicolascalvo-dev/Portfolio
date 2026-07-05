@@ -1,196 +1,255 @@
-/* Reset y fuente */
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Una fuente más moderna */
-  background: #f5f6fa;
-  color: #333;
-  scroll-behavior: smooth;
+:root {
+    --bg-main: #0B0F19;
+    --bg-surface: #1E293B;
+    --text-main: #F8FAFC;
+    --text-muted: #94A3B8;
+    --accent: #38BDF8;
+    --accent-hover: #7DD3FC;
+    --border: #334155;
 }
 
-/* Contenedor */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
 .container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 0;
 }
 
-/* Header - Estilo Profesional Aviación */
+.text-center { text-align: center; }
+
+/* Header */
 header {
-  background: #0a2540;
-  color: white;
-  padding: 60px 0;
-  text-align: center;
-  border-bottom: 4px solid #0077b6;
+    background-color: rgba(11, 15, 25, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-  letter-spacing: 1px;
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
 }
 
-header p {
-  opacity: 0.9;
-  font-weight: 300;
+.logo h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
-header nav {
-  margin-top: 25px;
+.badge {
+    background-color: rgba(56, 189, 248, 0.1);
+    color: var(--accent);
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid rgba(56, 189, 248, 0.2);
 }
 
-header nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 0.95rem;
+    transition: color 0.3s;
 }
 
-header nav a:hover {
-  color: #0077b6;
+nav a:hover { color: var(--text-main); }
+
+.btn-contact {
+    background-color: var(--accent);
+    color: var(--bg-main) !important;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
 }
 
-/* Secciones */
-section {
-  margin: 60px 0;
+.btn-contact:hover {
+    background-color: var(--accent-hover);
 }
 
-h2 {
-  color: #0a2540;
-  margin-bottom: 30px;
-  border-left: 5px solid #0077b6;
-  padding-left: 15px;
+/* Hero Section */
+.hero {
+    padding: 6rem 0;
 }
 
-/* Sobre Mí - Lista con Iconos */
-#about ul {
-  background: white;
-  padding: 30px !important;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  list-style: none;
+.hero h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #FFFFFF, #94A3B8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-#about li {
-  margin-bottom: 18px;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  display: flex;
-  align-items: center;
+.hero p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem auto;
 }
 
-#about li strong {
-  color: #0a2540;
-  margin-right: 5px;
+.hero-actions a {
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    margin: 0 0.5rem;
+    transition: all 0.3s;
 }
 
-/* Projects Grid */
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--bg-main);
+}
+
+.btn-primary:hover { background-color: var(--accent-hover); }
+
+.btn-secondary {
+    border: 1px solid var(--border);
+    color: var(--text-main);
+}
+
+.btn-secondary:hover { background-color: rgba(255, 255, 255, 0.05); }
+
+/* Projects section */
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent);
+}
+
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
 .project-card {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  display: flex;
-  flex-direction: column;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s, border-color 0.3s;
 }
 
-/* Animación de "Despegue" */
 .project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
-  border-bottom: 3px solid #0077b6;
+    transform: translateY(-4px);
+    border-color: var(--accent);
 }
 
-.project-card h3 {
-  margin-top: 0;
-  color: #0a2540;
+.card-header {
+    margin-bottom: 1rem;
+}
+
+.project-tag {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    padding: 0.1rem 0.5rem;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    margin-right: 0.4rem;
+}
+
+.project-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
 }
 
 .project-card p {
-  font-size: 0.95rem;
-  color: #555;
-  flex-grow: 1;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
 }
 
-/* Tecnologías dentro de las tarjetas */
-.project-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 15px 0;
+.project-links a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
 }
 
-.project-card ul li {
-  font-size: 0.85rem;
-  color: #666;
-  margin-bottom: 6px;
-  padding-left: 20px;
-  position: relative;
+.link-disabled {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-style: italic;
 }
 
-.project-card ul li::before {
-  content: "✈"; /* Icono de avión para tu temática */
-  position: absolute;
-  left: 0;
-  color: #0077b6;
-  font-size: 0.8rem;
+/* Stack Section */
+.stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
 }
 
-/* Botones de Proyecto */
-.project-card a {
-  align-self: flex-start;
-  padding: 10px 20px;
-  background: #0077b6;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 0.9rem;
-  transition: background 0.3s;
+.stack-category {
+    background-color: rgba(255, 255, 255, 0.02);
+    border-left: 3px solid var(--border);
+    padding: 1rem;
 }
 
-.project-card a:hover {
-  background: #0a2540;
+.stack-category h5 {
+    color: var(--accent);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
 }
 
-/* Skills */
-.skills-list {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
+.stack-category p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
 }
 
-.skills-list li {
-  background: #e9ecef;
-  color: #0a2540;
-  padding: 12px;
-  border-radius: 6px;
-  text-align: center;
-  font-weight: bold;
-  border-bottom: 2px solid #ced4da;
-}
-
-/* Contacto y Footer */
-#contact {
-  text-align: center;
-  background: #fff;
-  padding: 40px;
-  border-radius: 8px;
-}
-
+/* Footer */
 footer {
-  text-align: center;
-  background: #0a2540;
-  color: white;
-  padding: 30px 0;
-  margin-top: 40px;
+    border-top: 1px solid var(--border);
+    margin-top: 6rem;
+    padding: 4rem 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover { color: var(--accent); }
+
+.copy {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin-top: 2rem;
 }
