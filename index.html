@@ -1,98 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Alejandro Nicolas Calvo</title>
+    <title>Alejandro Nicolás Calvo | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
     <header>
-        <div class="container">
-            <h1>Alejandro</h1>
-            <p>Estudiante DAW | Cabin Crew | Desarrollo Web</p>
+        <div class="container header-flex">
+            <div class="logo">
+                <span class="badge">DAW & Cloud</span>
+                <h1>Alejandro Nicolás Calvo</h1>
+            </div>
             <nav>
-                <a href="#about">Sobre mí</a>
-                <a href="#projects">Proyectos</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contacto</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#stack">Tecnologías</a>
+                <a href="#contacto" class="btn-contact">Contacto</a>
             </nav>
         </div>
     </header>
 
-    <section id="about" class="container">
-        <h2>Sobre mí</h2>
-        <ul style="list-style: none; padding: 0;">
-            <li>🚀 <strong>Perfil:</strong> Estudiante de DAW especializado en entornos XAMPP.</li>
-            <li>✈️ <strong>Background:</strong> 6 años de experiencia en aviación, aportando disciplina y visión de
-                negocio.</li>
-            <li>💻 <strong>Foco actual:</strong> Desarrollo de aplicaciones web con arquitectura relacional
-                (MySQL).</li>
-            <li>🎨 <strong>Interés:</strong> UX/UI avanzado mediante efectos visuales como Parallax.</li>
-        </ul>
-    </section>
-
-    <section id="projects" class="container">
-        <h2>Mis Proyectos</h2>
-        <div class="projects-grid">
-
-            <div class="project-card">
-                <h3>Iberia Connect </h3>
-                <p>Aplicación web One-Page para la gestión de flota, destinos y recursos en el sector de la
-                    aviación.</p>
-                <ul>
-                    <li>Tecnologías: PHP, MySQL, HTML5 y CSS3.</li>
-                    <li>Destacado: Base de datos relacional para aeronaves y rutas con efectos visuales Parallax.</li>
-                </ul>
-                <a href="#">Ver documentación (XAMPP)</a>
+    <section class="hero">
+        <div class="container text-center">
+            <h2>Transformando la experiencia operativa en soluciones de software robustas.</h2>
+            <p>Desarrollador Web (DAW) especializado en Cloud Computing. Fusiono mi background en operaciones críticas del sector aeronáutico con la arquitectura cloud y la inteligencia artificial.</p>
+            <div class="hero-actions">
+                <a href="#proyectos" class="btn-primary">Ver Proyectos</a>
+                <a href="https://github.com/alejandronicolascalvo-dev" target="_blank" class="btn-secondary">GitHub Perfil</a>
             </div>
-
-            <div class="project-card">
-                <h3>Concesionario de Coches</h3>
-                <p>Landing page interactiva para la exposición y compraventa de vehículos desarrollada en Lenguaje de
-                    Marcas.</p>
-                <ul>
-                    <li>Tecnologías: HTML5, CSS3 y Diseño Responsivo.</li>
-                    <li>Estado: Desplegado en hosting gratuito.</li>
-                </ul>
-                <a href="https://compraventa.infinityfree.me/?i=1" target="_blank">Visitar sitio web</a>
-            </div>
-
-            <div class="project-card">
-                <h3>Próximo Proyecto</h3>
-                <p>Actualmente trabajando en nuevas implementaciones con Java y lógica de programación avanzada.</p>
-                <a href="#">En desarrollo...</a>
-            </div>
-
         </div>
     </section>
 
-    <section id="skills" class="container">
-        <h2>Skills Técnicas</h2>
-        <ul class="skills-list">
-            <li>Frontend: HTML5, CSS3 (Efectos Parallax)</li>
-            <li>Backend: PHP, MySQL (Bases de datos relacionales) </li>
-            <li>Entornos: XAMPP, Control de versiones Git </li>
-            <li>Soft Skills: Gestión de recursos, trabajo en equipo y comunicación técnica</li>
-        </ul>
+    <section id="proyectos" class="projects-section">
+        <div class="container">
+            <h3 class="section-title">Proyectos Destacados</h3>
+            
+            <div class="projects-grid">
+                <!-- Proyecto 1: SkyOps -->
+                <div class="project-card animate-card">
+                    <div class="card-header">
+                        <span class="project-tag">JavaScript ES6</span>
+                        <span class="project-tag">AviationTech</span>
+                    </div>
+                    <h4>SkyOps - Dashboard de Operaciones Aéreas (OCC)</h4>
+                    <p>Centro de control digital diseñado para gestionar flotas y tripulaciones en tiempo real bajo lógica de disponibilidad crítica.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/alejandronicolascalvo-dev/OCC-ops" target="_blank" class="link-repo">Ver Código →</a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2: Azure IA -->
+                <div class="project-card animate-card">
+                    <div class="card-header">
+                        <span class="project-tag">Azure AI Foundry</span>
+                        <span class="project-tag">IA & Governance</span>
+                    </div>
+                    <h4>Agente conversacional y Gobernanza Cloud</h4>
+                    <p>Despliegue y evaluación automatizada de un asistente de IA con reglas estrictas anti-alucinación y mitigación de jailbreaks.</p>
+                    <div class="project-links">
+                        <span class="link-disabled">Fase de Documentación</span>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3: Iberia Connect -->
+                <div class="project-card animate-card">
+                    <div class="card-header">
+                        <span class="project-tag">PHP & MySQL</span>
+                        <span class="project-tag">Full-Stack</span>
+                    </div>
+                    <h4>Iberia Connect (Proyecto Intermodular)</h4>
+                    <p>Aplicación web One-Page orientada a la gestión integrada de recursos técnicos, aeronaves y rutas de vuelo.</p>
+                    <div class="project-links">
+                        <a href="#" class="link-repo">Desplegado en Local (XAMPP)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>© 2026 Alejandro Nicolás Calvo </p>
+    <section id="stack" class="stack-section">
+        <div class="container">
+            <h3 class="section-title">Stack Tecnológico</h3>
+            <div class="stack-grid">
+                <div class="stack-category">
+                    <h5>Lenguajes</h5>
+                    <p>Java, JavaScript (ES6+), Python, PHP, HTML5, CSS3</p>
+                </div>
+                <div class="stack-category">
+                    <h5>Bases de Datos</h5>
+                    <p>SQL (Oracle, MySQL)</p>
+                </div>
+                <div class="stack-category">
+                    <h5>Cloud e IA</h5>
+                    <p>Azure AI Foundry, Azure AI Search, Azure OpenAI</p>
+                </div>
+                <div class="stack-category">
+                    <h5>Herramientas</h5>
+                    <p>Git, GitHub, Docker, XAMPP</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="container text-center">
+            <h3>¿Hablamos?</h3>
+            <p>Estoy disponible para prácticas y proyectos de desarrollo de software.</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/alejandronicolascalvo-dev/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/alejandronicolascalvo-dev" target="_blank">GitHub</a>
+            </div>
+            <p class="copy">&copy; 2026 Alejandro Nicolás Calvo. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
-    <section id="contact" class="container">
-        <h2>Contacto</h2>
-        <p>GitHub: <a href="#">Tu GitHub</a></p>
-        <p>LinkedIn: <a href="#">Tu LinkedIn</a></p>
-    </section>
-
-
-
-    <script src="script.js"></script>
 </body>
-
 </html>
